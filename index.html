@@ -59,14 +59,14 @@
                 </div>
             </div>
         </div>
-        <div class="top-nav">
+        <nav class="top-nav">
             <div class="container">
                 <div class="inner">
-                    <a class="reservation" href="">Rezervasiya</a>
+                    <a class="btn-general border d-none d-xl-flex" href="#">Rezervasiya</a>
                     <button class="menu-button mobile d-xl-none"><i class="fa-solid fa-bars"></i></button>
                     <a class="logo" href="#"><img src="./images/logo/logo.png" alt="logo"></a>
                     <div class="right">
-                        <button class="search-button"> <i class="fa-solid fa-magnifying-glass"></i>
+                        <button class="search-button mobile d-xl-none"> <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
 
                         <div class="sosial-icons">
@@ -76,17 +76,26 @@
                             <a href="#"><i class="fa-brands fa-youtube "></i></a>
                             <a href="#"><i class="fa-brands fa-instagram "></i></a>
                         </div>
+                        <div class="search form">
+                            <button class="close-button d-xl-none"> <i class="fa-solid fa-xmark"></i> </button>
+                            <form>
+                                <input type="text" placeholder="Axtar" value="">
+                                <button>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
 
                     </div>
 
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
 
 
 
-  
+
 
 
 
@@ -96,9 +105,9 @@
         crossorigin="anonymous"></script>
 
     <script src="./js/app.js" defer></script>
-   
-   
-   <script>
+
+
+    <script>
 
         var swiper = new Swiper(".swiper-banner", {
             slidesPerView: 1,
@@ -108,7 +117,7 @@
                 delay: 2500,
                 disableOnInteraction: false,
             },
-          
+
         });
 
     </script>
