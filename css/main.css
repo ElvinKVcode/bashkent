@@ -117,6 +117,23 @@ header .menu-button {
     margin-right: 15px;
 }
 
+button {
+    align-items: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+.fa-solid {
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+}
+
 header button.mobile {
     color: #fff;
     font-size: 24px;
@@ -124,16 +141,113 @@ header button.mobile {
     min-width: 40px;
 }
 
-.logo {
+ .top-nav .logo {
     max-width: 270px;
     width: 100%;
 }
 
-.logo img {
+ .top-nav .logo img {
     object-fit: contain;
     width: 100%;
+}
+
+img {
+    vertical-align: middle;
 }
 
 header .search-button {
     margin-left: 15px;
 }
+
+.sosial-icons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sosial-icons a {
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    padding: 10px;
+    width: 40px;
+}
+.sosial-icons a i {
+    font-size: 20px;
+    transition: all 0.1s;
+  }
+  
+  .sosial-icons a i:hover {
+    background-color: #ca3d26;
+  }
+
+.sosial-icons a .fa-brands{
+    font-weight: 400;
+    font-family: "Font Awesome 6 Brands";
+}
+
+ .top-nav .search-form form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    caret-color: #fff;
+    color: #fff;
+    min-height: 50px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+/* .nav-links.active {
+    left: 0;
+    opacity: 1;
+}
+.nav-links {
+    align-items: flex-start;
+    background-color: #09080e;
+    box-shadow: 0 0 5px #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 400px;
+    min-height: 100vh;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.nav-links .container{
+    width: 100%;
+    padding: 0 12px;
+}
+.nav-links .header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.nav-links .logo {
+    max-width: 200px;
+    width: 100%;
+}
+.nav-links .close-button {
+    color: #ca3d26;
+    font-size: 30px;
+}
+.nav-links .body, .nav-links .links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.nav-links .body {
+    justify-content: flex-start;
+    max-height: 85vh;
+    min-height: 85vh;
+    overflow: auto;
+    padding-bottom: 80px;
+} */
