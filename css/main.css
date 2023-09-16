@@ -1,3 +1,29 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
 header {
     width: 100%;
     min-height: 80vh;
@@ -36,22 +62,21 @@ header {
 }
 
 .swiper-slide {
-    flex-shrink: 0;
     width: 100%;
     height: 100%;
-    position: relative;
-    transition-property: transform;
-    display: block;
+}
+
+.banner-swiper-container .swiper {
+    width: 100%;
+    height: 100%;
 }
 
 .banner-swiper-container .banner-img {
-    background-position: 50%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-    min-height: 80vh;
-    position: relative;
     width: 100%;
+    height: 100%;
 }
 
 .banner-swiper-container .banner-img:after {
@@ -77,7 +102,6 @@ header nav.top-nav {
 }
 
 header nav {
-    background-color: hsla(0, 0%, 100%, .6);
     position: relative;
     width: 100%;
     z-index: 1;
@@ -88,7 +112,6 @@ header nav .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 79px;
     padding: 0 12px;
     width: 100%;
 }
@@ -102,20 +125,9 @@ header nav .container .inner {
     width: 100%;
 }
 
-.btn-general.border {
-    border: 1px solid #000 !important;
-}
-
-.btn-general {
-    border-radius: 0;
-    color: #ca3d26;
-    cursor: pointer;
-    padding: 10px 15px;
-}
-
-header .menu-button {
+/* header .menu-button {
     margin-right: 15px;
-}
+} */
 
 button {
     align-items: center;
@@ -129,6 +141,7 @@ button {
     outline: none;
     padding: 0;
 }
+
 .fa-solid {
     font-weight: 900;
     font-family: "Font Awesome 6 Free";
@@ -141,23 +154,32 @@ header button.mobile {
     min-width: 40px;
 }
 
- .top-nav .logo {
-    max-width: 270px;
+/* .search-button {
+    color: #ca3d26;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+.top-nav .logo {
+    max-width: 180px;
     width: 100%;
 }
 
- .top-nav .logo img {
+.top-nav .logo img {
     object-fit: contain;
     width: 100%;
+
 }
 
 img {
     vertical-align: middle;
 }
 
-header .search-button {
+/* header .search-button {
     margin-left: 15px;
-}
+} */
 
 .sosial-icons {
     align-items: center;
@@ -174,21 +196,26 @@ header .search-button {
     padding: 10px;
     width: 40px;
 }
+
 .sosial-icons a i {
     font-size: 20px;
     transition: all 0.1s;
-  }
-  
-  .sosial-icons a i:hover {
-    background-color: #ca3d26;
-  }
+}
 
-.sosial-icons a .fa-brands{
+.sosial-icons a i:hover {
+    background-color: #ca3d26;
+}
+
+.sosial-icons a .fa-brands {
     font-weight: 400;
     font-family: "Font Awesome 6 Brands";
 }
 
- .top-nav .search-form form input {
+.top-nav .search-form form {
+    position: relative;
+}
+
+.top-nav .search-form form input {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #fff;
@@ -199,29 +226,43 @@ header .search-button {
     padding: 10px;
     width: 100%;
 }
-/* .nav-links.active {
-    left: 0;
-    opacity: 1;
+
+.top-nav .search-form form input::placeholder {
+    color: #fff;
 }
-.nav-links {
-    align-items: flex-start;
-    background-color: #09080e;
-    box-shadow: 0 0 5px #000;
+
+.top-nav .search-form form button {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.nav-links .navbar-links {
+
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-width: 400px;
-    min-height: 100vh;
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
 }
-.nav-links .container{
-    width: 100%;
-    padding: 0 12px;
+
+.navbar-links a {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-bottom: 10px;
+    padding-top: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    border-bottom: 1px solid #fff;
+
 }
+
 .nav-links .header {
     align-items: center;
     display: flex;
@@ -230,24 +271,468 @@ header .search-button {
     margin-bottom: 40px;
     width: 100%;
 }
-.nav-links .logo {
-    max-width: 200px;
-    width: 100%;
+
+header .navbar-links a {
+    color: #fff;
 }
-.nav-links .close-button {
-    color: #ca3d26;
-    font-size: 30px;
+
+.header-content .home .title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
 }
-.nav-links .body, .nav-links .links {
+
+.header-content {
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.header-content {
+    color: #fff;
+    min-height: 60vh;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ca3d26;
+
+}
+
+.header-content .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.header-content .container {
+    width: 100%;
+    margin: 0 95.5px;
+    padding: 0 12px;
+}
+
+.header-content .home {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-content .home {
+    font-size: 26px;
+    font-weight: 600;
+    min-width: 180px;
+    padding: 12px 30px;
+}
+
+.header-content .home .title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.top-nav .btn-general:hover {
+    background-color: #ca3d26;
+}
+
+.btn-top {
+    align-items: center;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+#menu-offcanvas .logo {
+    max-width: 200px;
+}
+
+#menu-offcanvas {
+    background-color: #000;
+}
+
+@media only screen and (min-width: 768px) {
+    .header-content h1 {
+        max-width: 1200px;
+    }
+}
+
+#menu-offcanvas a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+#menu-offcanvas .logo img {
+    object-fit: contain;
+    width: 100%;
+    vertical-align: middle;
+}
+
+#menu-offcanvas .offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 40px;
     width: 100%;
 }
-.nav-links .body {
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    font-size: 30px;
+    color: #ca3d26;
+    padding: 1px 6px;
+}
+
+#menu-offcanvas .offcanvas-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+#menu-offcanvas .offcanvas-body {
     justify-content: flex-start;
     max-height: 85vh;
     min-height: 85vh;
     overflow: auto;
     padding-bottom: 80px;
-} */
+}
+
+#menu-offcanvas .offcanvas-social-icons a i:hover {
+    background-color: #ca3d26;
+}
+
+@media only screen and (min-width: 768px) {
+    header button.mobile {
+        font-size: 38px;
+    }
+}
+
+#menu-offcanvas .offcanvas-body .offcanvas-menu-links a {
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.bottom-nav {
+    width: 100%;
+}
+
+.bottom-nav .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.bottom-nav .nav-links a {
+    color: #fff;
+
+    font-size: 20px;
+    margin-right: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-bottom: 10px;
+    padding-top: 10px;
+    padding: 10px 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    .offcanvas-menu-links {
+        margin-bottom: 12px;
+        min-width: 150px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #menu-offcanvas .offcanvas-menu-links {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
+.btn-general.active {
+    background-color: #ca3d26;
+}
+
+.btn-top.active {
+    background-color: #ca3d26;
+}
+
+.btn-general {
+    margin-bottom: 12px;
+    min-width: 150px;
+    align-items: center;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+.btn-general.border {
+    border: 1px solid #fff !important;
+}
+
+.offcanvas-social-icons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.offcanvas-social-icons a {
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    padding: 10px;
+    width: 40px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .offcanvas {
+        max-width: 720px;
+    }
+}
+
+.search-form i {
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: "Font Awesome 6 Free";
+}
+
+.search-form i:hover {
+    color: #ca3d26;
+}
+
+.bottom-nav .nav-links .active {
+    background-color: #ca3d26;
+}
+
+
+.top-nav .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer {
+    background-color: #09080e;
+    color: #fff;
+    padding: 40px 0;
+    width: 100%;
+}
+
+footer .container {
+    width: 100%;
+}
+
+footer .col-12.logo-col .inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .container .row {
+    width: 100%;
+    margin: 0 12px;
+}
+
+footer .col-12.logo-col {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.row .col-12 {
+    margin-bottom: 40px;
+    padding: 0 12px;
+}
+
+
+.col-12 .logo {
+    max-width: 270px;
+    width: 100%;
+}
+
+.col-12 .logo img {
+    object-fit: contain;
+    width: 100%;
+}
+
+footer .sosial-icons {
+    margin-top: 30px;
+}
+
+footer .sosial-icons a {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer .sosial-icons a {
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    padding: 10px;
+    width: 40px;
+}
+
+footer .fa-brands {
+    font-weight: 400;
+}
+
+footer .fa-brands {
+    font-family: "Font Awesome 6 Brands";
+}
+
+footer .col-12 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+footer .footer-links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .footer-links .title {
+    margin-bottom: 25px;
+}
+
+footer .footer-links a {
+    color: #fff;
+    margin-bottom: 13px;
+    position: relative;
+}
+
+footer .bottom {
+    align-items: center;
+    border-top: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    padding: 18px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.about {
+    width: 100%;
+    position: relative;
+}
+
+section .container {
+    width: 100%;
+}
+
+.section-title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-title h1 {
+    margin-bottom: 8px;
+}
+
+.section-title img {
+    max-width: 210px;
+    object-fit: contain;
+    transform: translateY(-28px) scale(.9);
+}
+
+.section-title .row {
+    width: 100%;
+    margin: 0 12px;
+}
+
+section.about .about-row .content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+section.about .about-row .content .text {
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+section.about .about-row .content .btn-general {
+    max-width: 240px;
+    min-width: 180px;
+    width: 100%;
+}
+
+section.about .about-row .content .btn-general.active {
+    padding: 10px 15px;
+}
+
+section.about .about-row .about-img {
+    height: 100%;
+    width: 100%;
+}
+
+section.about .about-row .about-img img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+section.about .row {
+    flex-direction: row-reverse;
+}
